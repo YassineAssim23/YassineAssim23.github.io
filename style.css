@@ -1,423 +1,510 @@
 /* General */
 
+/* Importing a font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600&display=swap');
-
+/* Resetting default margin and padding for all elements */
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
+/* Setting the font family and background color for the entire page */
 body {
-    font-family: 'League Spartan', sans-serif;
-    background-color: rgba(243, 235, 224, 0.993);
+  font-family: "League Spartan", sans-serif;
+  background-color: rgba(243, 235, 224, 0.993);
 }
 
+/* Enabling smooth scrolling behavior for HTML elements */
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
-p{
-    color: rgb(85, 85, 85);
+/* Setting the default text color for paragraphs */
+p {
+  color: rgb(85, 85, 85);
 }
 
 /* Transition */
 
-a, .btn{
-    transition: all 300ms ease;
+/* Applying smooth transitions to anchor links and buttons */
+a,
+.btn {
+  transition: all 300ms ease;
 }
 
 /* Desktop Navigation */
 
-nav, .nav-links{
-    display: flex;
+/* Styling for navigation elements on desktop */
+
+/* Styling for navigation bar and navigation links */
+nav,
+.nav-links {
+  display: flex;
 }
 
+/* Styling for the main navigation container */
 nav {
-    justify-content: space-around;
-    align-items: center;
-    height: 17vh;
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
 }
 
-.nav-links{
-    gap: 2rem;
-    list-style: none;
-    font-size: 1.5rem;
+/* Styling for the navigation links list */
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
 }
 
+/* Styling for anchor links */
 a {
-    color: rgba(126, 88, 6, 0.726);
-    text-decoration: none;
-    text-decoration-color: white;
+  color: rgba(126, 88, 6, 0.726);
+  text-decoration: none;
+  text-decoration-color: white;
 }
 
-a:hover{
-    color: rgba(0, 0, 0, 0.329);
-    text-decoration: underline; 
-    text-underline-offset: 0.5rem;
-    text-decoration-color: rgb(0, 0, 0, 0.329);
+/* Styling for anchor links on hover */
+a:hover {
+  color: rgba(0, 0, 0, 0.329);
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  text-decoration-color: rgb(0, 0, 0, 0.329);
 }
 
-.logo img{
-    width: 200px;
-    height: auto;
+/* Styling for the logo image */
+.logo img {
+  width: 200px;
+  height: auto;
 }
 
-.logo:hover{
-    cursor: point;
+/* Hover effect for the logo */
+.logo:hover {
+  cursor: pointer;
 }
+
 
 /* Hamburger Menu */
 
-#hamburger-nav{
-    display: none;
+/* Hide the hamburger navigation by default */
+#hamburger-nav {
+  display: none;
 }
 
+/* Styling for the hamburger menu container */
 .hamburger-menu {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
-.hamburger-icon{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 24px;
-    width: 30px;
-    cursor: pointer;
+/* Styling for the hamburger icon container */
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
 }
 
-.hamburger-icon span{
-    width: 100%;
-    height: 2px;
-    background-color: black;
-    transition: all 0.3 ease-in-out;
+/* Styling for the individual lines (spans) in the hamburger icon */
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3s ease-in-out;
 }
 
-.menu-links{
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: white;
-    width: fit-content;
-    max-height: 0;
-    overflow: hidden;
-    transform: all 0.3 ease-in-out;
+/* Styling for the menu links container */
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
 }
 
-.menu-links a{
-    display: block;
-    padding: 10px;
-    text-align: center;
-    font-size: 1.5rem;
-    color: black;
-    text-decoration: none;
-    transition: all 0.3 ease-in-out;
+/* Styling for the menu link items */
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 
+/* Remove list-style for menu link items */
 .menu-links li {
-    list-style: none;
+  list-style: none;
 }
 
-.menu-links.open{
-    max-height: 300px;
+/* Open the menu links container */
+.menu-links.open {
+  max-height: 300px;
 }
 
-.hamburger-icon.open span:first-child{
-    transform: rotate(45deg) translate(10px, 5px);
+/* Animation for the hamburger icon when the menu is open */
+
+/* Rotate and translate the first line to create an "X" shape */
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
 }
 
-.hamburger-icon.open span:nth-child(2){
-    opacity: 0;
+/* Hide the middle line when the menu is open */
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
 }
 
-.hamburger-icon.open span:last-child{
-    transform: rotate(-45deg) translate(10px, -5px);
+/* Rotate and translate the last line to create an "X" shape */
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
 }
 
-.hamburger-icon span:first-child{
-    transform: none;
+/* Reset the styles of the first line when the menu is open */
+.hamburger-icon span:first-child {
+  transform: none;
 }
 
-.hamburger-icon span:first-child{
-    opacity: 1;
+/* Reset the opacity of the first line when the menu is open */
+.hamburger-icon span:first-child {
+  opacity: 1;
 }
 
-.hamburger-icon span:first-child{
-    transform: none;
+/* Reset the styles of the first line when the menu is open */
+.hamburger-icon span:first-child {
+  transform: none;
 }
+
 
 /* Sections */
 
+/* Styling for all sections */
 section {
-    padding-top: 4vh;
-    height: 96vh;
-    margin: 0 10rem;
-    box-sizing: border-box;
-    min-height: fit-content;
+  padding-top: 4vh; /* Top padding for sections */
+  height: 96vh; /* Sections take up 96% of the viewport height */
+  margin: 0 10rem; /* Left and right margin for spacing */
+  box-sizing: border-box; /* Include padding and border in the total width/height */
+  min-height: fit-content; /* Ensure minimum height fits content */
 }
 
-.section-container{
-    display: flex;
-}
-
-#profile {
-    display: flex;
-    justify-content: center;
-    gap: 5rem;
-    height: 80vh;
-}
-
-.section__pic-container{
-    display: flex;
-    height: 400px;
-    width: 400px;
-    margin: auto 0;
-}
-
-.section__text{
-    align-self: center;
-    text-align: center;
-}
-
-.section__text p{
-    font-weight: 600;
-}
-
-.section__text__p1{
-    text-align: center;
-}
-
-.section__text__p2{
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-}
-
-.title{
-    font-size: 4rem;
-    text-align: center;
-}
-
-#socials-container{
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-    gap: 1rem;
-}
-
-.icon{
-    cursor: pointer;
-    height: 2rem;
-}
-
-.btn-container{
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.btn{
-    font-weight: 600;
-    transition: all 300ms ease;
-    padding: 1rem;
-    width: 8rem;
-    border-radius: 2rem;
-}
-
-.btn-color-1, .btn-color-2{
-    border: rgb(53, 53, 53) 0.1rem solid;
-}
-
-.btn-color-1:hover, .btn-color-2:hover{
-    cursor: pointer;
-}
-
-.btn-color-1, .btn-color-2:hover{
-    background: rgba(94, 204, 204, 0.589);
-    color: rgb(0, 0, 0);
-}
-
-.btn-color-1:hover{
-    background: rgb(248, 221, 139);
-}
-
-.btn-color-2{
-    background: none;
-}
-
-.btn-color-2:hover{
-    border: rgb(255, 255, 255) 0.1rem solid;
-}
-
-.btn-container{
-    gap: 1rem;
-}
-
-#about{
-    position: relative;
-}
-
-.about-containers{
-    gap: 2rem;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-}
-
-.about-details-container{
-    justify-content: center;
-    flex-direction: column;
-}
-
-.about-containers, .about-details-container{
-    display: flex;
-}
-
-.about-pic{
-    border-radius: 2rem;
-    width: 300px;
-    height: 300px;
-}
-
-.arrow {
-    position: absolute;
-    right: -5rem;
-    bottom: 2.5rem;
-}
-
-.details-container{
-    padding: 1.5rem;
-    flex: 1;
-    background: rgba(243, 235, 224, 0.993);
-    border-radius: 2rem;
-    border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163);
-    text-align: center;
-}
-
+/* Container for sections, using flex display */
 .section-container {
-    gap: 4rem;
-    height: 80%;
+  display: flex;
 }
 
-.section__pic-container{
-    height: 400px;
-    width: 400px;
-    margin: auto 0;
-
+/* Profile section specific styles */
+#profile {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  gap: 5rem; /* Gap between elements */
+  height: 80vh; /* Height of the profile section */
 }
 
-.text-container p{
-    color: black;
+/* Container for the profile picture */
+.section__pic-container {
+  display: flex;
+  height: 400px; /* Height of the profile picture container */
+  width: 400px; /* Width of the profile picture container */
+  margin: auto 0; /* Margin to center the container */
 }
 
+/* Container for text content within sections */
+.section__text {
+  align-self: center; /* Vertically center text content */
+  text-align: center; /* Center-align text */
+}
+
+/* Styling for paragraph text within sections */
+.section__text p {
+  font-weight: 600; /* Bold font for paragraphs */
+}
+
+/* Styling for the first paragraph in sections */
+.section__text__p1 {
+  text-align: center; /* Center-align first paragraph */
+}
+
+/* Styling for the second paragraph in sections */
+.section__text__p2 {
+  font-size: 1.75rem; /* Font size for the second paragraph */
+  margin-bottom: 1rem; /* Bottom margin for spacing */
+}
+
+/* Styling for section titles */
+.title {
+  font-size: 4rem; /* Font size for titles */
+  text-align: center; /* Center-align titles */
+}
+
+/* Container for social media icons */
+#socials-container {
+  display: flex;
+  justify-content: center; /* Center-align social media icons */
+  margin-top: 1rem; /* Top margin for spacing */
+  gap: 1rem; /* Gap between social media icons */
+}
+
+/* Styling for social media icons */
+.icon {
+  cursor: pointer; /* Cursor style for icons */
+  height: 2rem; /* Height of icons */
+}
+
+/* Container for buttons within sections */
+.btn-container {
+  display: flex;
+  justify-content: center; /* Center-align buttons */
+  gap: 1rem; /* Gap between buttons */
+}
+
+/* Styling for buttons within sections */
+.btn {
+  font-weight: 600; /* Bold font for buttons */
+  transition: all 300ms ease; /* Transition effect for buttons */
+  padding: 1rem; /* Padding for buttons */
+  width: 8rem; /* Width of buttons */
+  border-radius: 2rem; /* Border radius for buttons */
+}
+
+/* Styling for button colors */
+.btn-color-1,
+.btn-color-2 {
+  border: rgb(53, 53, 53) 0.1rem solid; /* Border for buttons */
+}
+
+/* Hover effect for button color 1 */
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer; /* Cursor style on hover */
+}
+
+/* Background and text color for button color 1 on hover */
+.btn-color-1,
+.btn-color-2:hover {
+  background: rgba(94, 204, 204, 0.589); /* Background color */
+  color: rgb(0, 0, 0); /* Text color */
+}
+
+/* Background color for button color 1 on hover */
+.btn-color-1:hover {
+  background: rgb(248, 221, 139); /* Background color */
+}
+
+/* Styling for button color 2 */
+.btn-color-2 {
+  background: none; /* Transparent background for button color 2 */
+}
+
+/* Border color for button color 2 on hover */
+.btn-color-2:hover {
+  border: rgb(255, 255, 255) 0.1rem solid; /* Border color */
+}
+
+/* Gap between elements within sections */
+.btn-container {
+  gap: 1rem;
+}
+
+/* About section specific styles */
+#about {
+  position: relative; /* Relative positioning for the about section */
+}
+
+/* Gap between about containers */
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem; /* Bottom margin for spacing */
+  margin-top: 2rem; /* Top margin for spacing */
+}
+
+/* Flex container for about details */
+.about-details-container {
+  justify-content: center; /* Center-align about details */
+  flex-direction: column; /* Column layout for about details */
+}
+
+/* Flex container for about containers */
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+/* Styling for the about picture */
+.about-pic {
+  border-radius: 2rem; /* Border radius for the about picture */
+  width: 300px; /* Width of the about picture */
+  height: 300px; /* Height of the about picture */
+}
+
+/* Styling for the arrow icon */
+.arrow {
+  position: absolute; /* Absolute positioning for the arrow icon */
+  right: -5rem; /* Right position with an offset */
+  bottom: 2.5rem; /* Bottom position with an offset */
+}
+
+
+/* Styling for details containers */
+.details-container {
+  padding: 1.5rem; /* Padding inside the details container */
+  flex: 1; /* Allow flexible sizing within a flex container */
+  background: rgba(243, 235, 224, 0.993); /* Background color with transparency */
+  border-radius: 2rem; /* Border radius for rounded corners */
+  border: rgb(53, 53, 53) 0.1rem solid; /* Border style */
+  border-color: rgb(163, 163, 163); /* Border color */
+  text-align: center; /* Center-align text */
+}
+
+/* Styling for section containers */
+.section-container {
+  gap: 4rem; /* Gap between section containers */
+  height: 80%; /* Height of section containers */
+}
+
+/* Styling for the profile picture container */
+.section__pic-container {
+  height: 400px; /* Height of the profile picture container */
+  width: 400px; /* Width of the profile picture container */
+  margin: auto 0; /* Margin for centering the container */
+}
+
+/* Styling for paragraph text in text containers */
+.text-container p {
+  color: black; /* Text color */
+}
+
+/* Styling for the 'experience' section */
 #experience {
-    position: relative;
+  position: relative; /* Relative positioning for the 'experience' section */
 }
 
-.experience-sub-title{
-    color: rgb(85, 85, 85);
-    font-weight: 600;
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
+/* Styling for experience sub-titles */
+.experience-sub-title {
+  color: rgb(85, 85, 85); /* Text color for sub-titles */
+  font-weight: 600; /* Bold font weight */
+  font-size: 1.75rem; /* Font size */
+  margin-bottom: 2rem; /* Bottom margin for spacing */
 }
 
-.experience-details-container{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+/* Styling for the container of experience details */
+.experience-details-container {
+  display: flex; /* Flex display for arranging experience details */
+  justify-content: center; /* Center-align content horizontally */
+  flex-direction: column; /* Column layout for content */
 }
 
-.article-container{
-    display: flex;
-    text-align: initial;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 2.5rem;
-    justify-content: space-around;
+/* Styling for the container of articles in experience section */
+.article-container {
+  display: flex; /* Flex display for arranging articles */
+  text-align: initial; /* Left-align text */
+  flex-wrap: wrap; /* Wrap articles when there's not enough space */
+  flex-direction: row; /* Arrange articles in rows */
+  gap: 2.5rem; /* Gap between articles */
+  justify-content: space-around; /* Evenly space articles */
 }
 
-article{
-    display: flex;
-    width: 10rem;
-    justify-content: space-around;
-    gap: 0.5rem;
+/* Styling for individual articles in experience section */
+article {
+  display: flex; /* Flex display for individual articles */
+  width: 10rem; /* Width of each article */
+  justify-content: space-around; /* Evenly space content within articles */
+  gap: 0.5rem; /* Gap between content within articles */
 }
 
-article .icon{
-    cursor:  default;
+/* Styling for icons within articles */
+article .icon {
+  cursor: default; /* Default cursor style for icons */
 }
 
-#projects{
-    position: relative;
+/* Styling for the 'projects' section */
+#projects {
+  position: relative; /* Relative positioning for the 'projects' section */
 }
 
-.color-container{
-    border-color: rgb(163, 163, 163);
-    background: rgb(243, 235, 224, 0.993);
-    transform: scale(1);
+/* Styling for containers with a background color */
+.color-container {
+  border-color: rgb(163, 163, 163); /* Border color for containers */
+  background: rgb(243, 235, 224, 0.993); /* Background color with transparency */
+  transform: scale(1); /* Scale transformation for containers */
 }
 
-.project-img{
-    border-radius: 1rem;
-    width: 90%;
-    height: 90%;
+/* Styling for project images */
+.project-img {
+  border-radius: 1rem; /* Border radius for rounded project images */
+  width: 90%; /* Width of project images */
+  height: 90%; /* Height of project images */
 }
 
-.project-title{
-    margin: 1rem;
-    color: black;
+/* Styling for project titles */
+.project-title {
+  margin: 1rem; /* Margin for project titles */
+  color: black; /* Text color for project titles */
 }
 
-.project-btn{
-    color: black;
-    border-color: rgb(163,163,163);
+/* Styling for project buttons */
+.project-btn {
+  color: black; /* Text color for project buttons */
+  border-color: rgb(163, 163, 163); /* Border color for project buttons */
 }
 
-#contact{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 70vh;
+/* Styling for the 'contact' section */
+#contact {
+  display: flex; /* Flex display for the 'contact' section */
+  justify-content: center; /* Center-align content horizontally */
+  flex-direction: column; /* Column layout for content */
+  height: 70vh; /* Height of the 'contact' section */
 }
 
-.contact-info-upper-container{
-    display: flex;
-    justify-content: center;
-    border-radius: 2rem;
-    border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163,163,163);
-    background: (250,250,250);
-    margin: 2rem auto;
-    padding: 0.5rem;
+/* Styling for upper containers in the 'contact' section */
+.contact-info-upper-container {
+  display: flex; /* Flex display for upper containers */
+  justify-content: center; /* Center-align content horizontally */
+  border-radius: 2rem; /* Border radius for upper containers */
+  border: rgb(53, 53, 53) 0.1rem solid; /* Border style */
+  border-color: rgb(163, 163, 163); /* Border color */
+  background: (250, 250, 250); /* Background color (Note: Missing 'rgba' here) */
+  margin: 2rem auto; /* Margin for upper containers */
+  padding: 0.5rem; /* Padding for upper containers */
 }
 
-.contact-info-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    margin: 1rem;
+/* Styling for containers in the 'contact' section */
+.contact-info-container {
+  display: flex; /* Flex display for containers */
+  align-items: center; /* Center-align content vertically */
+  justify-content: center; /* Center-align content horizontally */
+  gap: 0.5rem; /* Gap between elements within containers */
+  margin: 1rem; /* Margin for containers */
 }
 
-.contact-info-container p{
-    font-size: larger;
+/* Styling for paragraph text within containers */
+.contact-info-container p {
+  font-size: larger; /* Larger font size for text */
 }
 
-.contact-icon{
-    cursor: default;
+/* Styling for contact icons */
+.contact-icon {
+  cursor: default; /* Default cursor style for contact icons */
 }
 
-.email-icon{
-    height: 2.5rem;
+/* Styling for the email icon */
+.email-icon {
+  height: 2.5rem; /* Height of the email icon */
 }
 
-footer{
-    height: 26vh;
-    margin: 0 1rem;
+/* Styling for the footer section */
+footer {
+  height: 26vh; /* Height of the footer section */
+  margin: 0 1rem; /* Margin for the footer section */
 }
 
-footer p, a{
-    text-align: center;
-    justify-content: center;
-    display: flex;
+/* Styling for text and links within the footer */
+footer p, a {
+  text-align: center; /* Center-align text and links */
+  justify-content: center; /* Center content horizontally */
+  display: flex; /* Flex display for text and links */
 }

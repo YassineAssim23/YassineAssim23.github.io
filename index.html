@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Set the character encoding for the document -->
     <meta charset="UTF-8" />
+    <!-- Define the viewport settings for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Set the title of the web page -->
     <title>My Portfolio</title>
+    <!-- Include external CSS files for styling -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
+    <!-- Desktop navigation bar -->
     <nav id="desktop-nav">
+      <!-- Logo container -->
       <div class="logo">
+        <!-- Logo image -->
         <img src="./assets/LOGO.png" alt="YASSINE LOGO" />
       </div>
+      <!-- Navigation links container -->
       <div>
+        <!-- Unordered list for navigation links -->
         <ul class="nav-links">
+          <!-- Individual navigation items -->
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
@@ -22,17 +32,25 @@
       </div>
     </nav>
 
+    <!-- Hamburger (mobile) navigation bar -->
     <nav id="hamburger-nav">
+      <!-- Logo container -->
       <div class="logo">
+        <!-- Logo image -->
         <img src="./assets/LOGO.png" alt="YASSINE LOGO" />
       </div>
+      <!-- Hamburger menu container -->
       <div class="hamburger-menu">
+        <!-- Hamburger icon for mobile navigation -->
         <div class="hamburger-icon" onclick="toggleMenu()">
+          <!-- Three horizontal lines representing the menu icon -->
           <span></span>
           <span></span>
           <span></span>
         </div>
+        <!-- Navigation links for mobile -->
         <div class="menu-links">
+          <!-- Individual navigation items with click event to toggle menu -->
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
@@ -41,37 +59,53 @@
       </div>
     </nav>
     <section id="profile">
+      <!-- Container for profile picture -->
       <div class="section__pic-container">
+        <!-- Profile picture image -->
         <img
           src="./assets/profile-pic.png"
           alt="Yassine Assim Profile Picture"
         />
       </div>
 
+      <!-- Container for profile text -->
       <div class="section__text">
+        <!-- Introduction text -->
         <p class="section__text__p1">Hello, I'm</p>
+        <!-- Name -->
         <h1 class="title">Yassine Assim</h1>
+        <!-- Occupation -->
         <p class="section__text__p2">Software Engineering Student</p>
+
+        <!-- Container for buttons -->
         <div class="btn-container">
+          <!-- Button to download resume (opens PDF file) -->
           <button
             class="btn btn-color-2"
             onclick="window.open('./assets/resume-2023.pdf')"
           >
             Download Resume
           </button>
+          <!-- Button to navigate to the contact section -->
           <button class="btn btn-color-1" onclick="location.href='./#contact'">
             Contact Info
           </button>
         </div>
+
+        <!-- Container for social media links -->
         <div id="socials-container">
+          <!-- LinkedIn profile link -->
           <a href="https://www.linkedin.com/in/yassine-assim" target="_blank">
+            <!-- LinkedIn icon -->
             <img
               src="./assets/linkedin.png"
               alt="My Linkedin Profile"
               class="icon"
             />
           </a>
+          <!-- GitHub profile link -->
           <a href="https://github.com/YassineAssim23" target="_blank">
+            <!-- GitHub icon -->
             <img
               src="./assets/github.png"
               alt="My GitHub Profile"
@@ -82,38 +116,55 @@
       </div>
     </section>
     <section id="about">
+      <!-- Title for the section -->
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
+
+      <!-- Container for the section's content -->
       <div class="section-container">
+        <!-- Container for the profile picture -->
         <div class="section__pic-container">
+          <!-- Profile picture image -->
           <img src="./assets/faq.png" alt="Profile picture" class="about-pic" />
         </div>
+
+        <!-- Container for details and text -->
         <div class="about-details-container">
+          <!-- Sub-container for experience and education details -->
           <div class="about-containers">
+            <!-- Experience details -->
             <div class="details-container">
+              <!-- Experience icon -->
               <img
                 src="./assets/experience.png"
                 alt="Experience icon"
                 class="icon"
               />
               <h3>Experience</h3>
+              <!-- Experience information -->
               <p>1+ year <br />Front & Backend Development</p>
             </div>
+            <!-- Education details -->
             <div class="details-container">
+              <!-- Education icon -->
               <img
                 src="./assets/education.png"
                 alt="Education icon"
                 class="icon"
               />
               <h3>Education</h3>
+              <!-- Education information -->
               <p>
                 Software Development & Network Engineering (Advanced Diploma)<br />Honors
                 Bachelor of Computer Science (pursuing)
               </p>
             </div>
           </div>
+
+          <!-- Container for the text description -->
           <div class="text-container">
             <p>
+              <!-- Personal introduction and description -->
               A 2nd year software engineering student studying at Sheridan
               College. With a passion for both front & backend development, I
               thrive on tackling complex challenges and finding optimal
@@ -125,6 +176,8 @@
           </div>
         </div>
       </div>
+
+      <!-- Arrow icon to navigate to the experience section -->
       <img
         src="./assets/arrow.png"
         alt="Arrow icon"
@@ -133,100 +186,155 @@
       />
     </section>
     <section id="experience">
+      <!-- Title for the section -->
       <p class="section__text__p1">Here's My</p>
       <h1 class="title">Experience</h1>
+
+      <!-- Container for experience details -->
       <div class="experience-details-container">
+        <!-- Container for frontend and backend development details -->
         <div class="about-containers">
+          <!-- Container for frontend development details -->
           <div class="details-container">
+            <!-- Subtitle for frontend development -->
             <h2 class="experience-sub-title">Frontend Development</h2>
+            <!-- Container for individual skills and experience -->
             <div class="article-container">
+              <!-- Skill: HTML -->
               <article>
+                <!-- HTML icon -->
                 <img src="./assets/htmlicon.png" alt="HTML icon" class="icon" />
                 <div>
+                  <!-- Skill name: HTML -->
                   <h3>HTML</h3>
+                  <!-- Skill experience level -->
                   <p>Experienced</p>
                 </div>
               </article>
+              <!-- Skill: CSS -->
               <article>
+                <!-- CSS icon -->
                 <img src="./assets/cssicon.png" alt="HTML icon" class="icon" />
                 <div>
+                  <!-- Skill name: CSS -->
                   <h3>CSS</h3>
+                  <!-- Skill experience level -->
                   <p>Experienced</p>
                 </div>
               </article>
+              <!-- Skill: JavaScript -->
               <article>
+                <!-- JavaScript icon -->
                 <img src="./assets/jsicon.png" alt="HTML icon" class="icon" />
                 <div>
+                  <!-- Skill name: JavaScript -->
                   <h3>Javascript</h3>
+                  <!-- Skill experience level -->
                   <p>Intermediate</p>
                 </div>
               </article>
+              <!-- Skill: Git -->
               <article>
+                <!-- Git icon -->
                 <img src="./assets/git.png" alt="Git icon" class="icon" />
                 <div>
+                  <!-- Skill name: Git -->
                   <h3>Git</h3>
+                  <!-- Skill experience level -->
                   <p>Intermediate</p>
                 </div>
               </article>
+              <!-- Skill: React -->
               <article>
+                <!-- React icon -->
                 <img
                   src="./assets/reacticon.png"
                   alt="HTML icon"
                   class="icon"
                 />
                 <div>
+                  <!-- Skill name: React -->
                   <h3>React</h3>
+                  <!-- Skill experience level -->
                   <p>Basic</p>
                 </div>
               </article>
             </div>
           </div>
+
+          <!-- Container for backend development details -->
           <div class="details-container">
+            <!-- Subtitle for backend development -->
             <h2 class="experience-sub-title">Backend Development</h2>
+            <!-- Container for individual skills and experience -->
             <div class="article-container">
+              <!-- Skill: Java -->
               <article>
+                <!-- Java icon -->
                 <img src="./assets/javaicon.png" alt="Java icon" class="icon" />
                 <div>
+                  <!-- Skill name: Java -->
                   <h3>Java</h3>
+                  <!-- Skill experience level -->
                   <p>Experienced</p>
                 </div>
               </article>
+              <!-- Skill: Python -->
               <article>
+                <!-- Python icon -->
                 <img
                   src="./assets/pythonicon.png"
                   alt="Python icon"
                   class="icon"
                 />
                 <div>
+                  <!-- Skill name: Python -->
                   <h3>Python</h3>
+                  <!-- Skill experience level -->
                   <p>Intermediate</p>
                 </div>
               </article>
+              <!-- Skill: Node.js -->
               <article>
+                <!-- Node.js icon -->
                 <img src="./assets/nodeicon.png" alt="Node icon" class="icon" />
                 <div>
+                  <!-- Skill name: Node.js -->
                   <h3>Node.js</h3>
+                  <!-- Skill experience level -->
                   <p>Basic</p>
                 </div>
               </article>
+              <!-- Skill: PHP -->
               <article>
+                <!-- PHP icon -->
                 <img src="./assets/phpicon.png" alt="PHP icon" class="icon" />
                 <div>
+                  <!-- Skill name: PHP -->
                   <h3>PHP</h3>
+                  <!-- Skill experience level -->
                   <p>Basic</p>
                 </div>
               </article>
+              <!-- Skill: Spring Boot -->
               <article>
+                <!-- Spring Boot icon -->
                 <img src="./assets/spring.png" alt="Spring icon" class="icon" />
                 <div>
+                  <!-- Skill name: Spring Boot -->
                   <h3>Spring Boot</h3>
+                  <!-- Skill experience level -->
                   <p>Basic</p>
                 </div>
               </article>
+              <!-- Skill: MySQL -->
               <article>
+                <!-- MySQL icon -->
                 <img src="./assets/mysql.png" alt="MYSQL icon" class="icon" />
                 <div>
+                  <!-- Skill name: MySQL -->
                   <h3>MySQL</h3>
+                  <!-- Skill experience level -->
                   <p>Intermediate</p>
                 </div>
               </article>
@@ -234,6 +342,7 @@
           </div>
         </div>
       </div>
+      <!-- Arrow icon to navigate to the projects section -->
       <img
         src="./assets/arrow.png"
         alt="Arrow icon"
@@ -241,20 +350,30 @@
         onclick="location.href='./#projects'"
       />
     </section>
+
     <section id="projects">
+      <!-- Title for the section -->
       <p class="section__text__p1">Here are some of my</p>
       <h1 class="title">Projects</h1>
+
+      <!-- Container for project details -->
       <div class="experience-details-container">
+        <!-- Container for individual project details -->
         <div class="about-containers">
+          <!-- Container for the first project details -->
           <div class="details-container color-container">
+            <!-- Container for project image -->
             <div class="article-container">
+              <!-- Project image -->
               <img
                 src="./assets/filmfanatic.png"
                 alt="Project 1"
                 class="project-img"
               />
             </div>
+            <!-- Project title -->
             <h2 class="experience-sub-title project-title">FilmFanatic</h2>
+            <!-- Project description -->
             <p>
               A dynamic movie management application meticulously crafted using
               Java and JavaFX technologies. This versatile tool empowers
@@ -262,52 +381,62 @@
               effortlessly.
             </p>
             <br />
+            <!-- Technologies used -->
             <p>Java • JavaFX</p>
             <br />
+            <!-- Button to GitHub repository -->
             <div class="btn-container">
               <a
                 href="https://github.com/YassineAssim23/filmfanatic"
                 target="_blank"
               >
-                <button class="btn btn-color-2 project-btn">Github</button></a
-              >
+                <button class="btn btn-color-2 project-btn">Github</button>
+              </a>
             </div>
           </div>
+
+          <!-- Container for the second project details -->
           <div class="details-container color-container">
+            <!-- Container for project image -->
             <div class="article-container">
+              <!-- Project image -->
               <img
                 src="./assets/carrrental.png"
                 alt="Project 2"
                 class="project-img"
               />
             </div>
+            <!-- Project title -->
             <h2 class="experience-sub-title project-title">CarRental</h2>
+            <!-- Project description -->
             <p>
               A car rental website where you can view available vehicles and
               book through the calendar.
             </p>
             <br />
+            <!-- Technologies used -->
             <p>HTML • CSS • JS</p>
             <br />
+            <!-- Buttons for GitHub repository and live demo -->
             <div class="btn-container">
               <a
                 href="https://github.com/YassineAssim23/carrentalproject"
                 target="_blank"
               >
-                <button class="btn btn-color-2 project-btn">Github</button></a
-              >
+                <button class="btn btn-color-2 project-btn">Github</button>
+              </a>
               <a
                 href="https://yassineassim-carrental.netlify.app/"
                 target="_blank"
               >
-                <button class="btn btn-color-2 project-btn">
-                  Live Demo
-                </button></a
-              >
+                <button class="btn btn-color-2 project-btn">Live Demo</button>
+              </a>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Arrow icon to navigate to the contact section -->
       <img
         src="./assets/arrow.png"
         alt="Arrow icon"
@@ -316,15 +445,21 @@
       />
     </section>
     <section id="contact">
+      <!-- Section title -->
       <p class="section__text__p1">Let's Connect!</p>
       <h1 class="title">Contact Me</h1>
+
+      <!-- Container for contact information -->
       <div class="contact-info-upper-container">
+        <!-- Container for email contact -->
         <div class="contact-info-container">
+          <!-- Email icon -->
           <img
             src="./assets/email.png"
             alt="Email icon"
             class="icon contact-icon email-icon"
           />
+          <!-- Email address with mailto link -->
           <p>
             <a href="mailto:assimy@sheridancollege.ca"
               >assimy@sheridancollege.ca</a
@@ -332,20 +467,27 @@
           </p>
         </div>
       </div>
+
+      <!-- Container for LinkedIn contact -->
       <div class="contact-info-upper-container">
+        <!-- Container for LinkedIn icon and link -->
         <div class="contact-info-container">
+          <!-- LinkedIn icon -->
           <img
             src="./assets/linkedin.png"
             alt="LinkedIn icon"
             class="icon contact-icon"
           />
+          <!-- LinkedIn profile link -->
           <p>
-            <a href="https://www.linkedin.com/in/yassine-assim/">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/yassine-assim/" target="_blank">LinkedIn</a>
           </p>
         </div>
       </div>
     </section>
+
     <footer>
+      <!-- Footer navigation links -->
       <nav>
         <div class="nav-links-container">
           <ul class="nav-links">
@@ -356,8 +498,18 @@
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2023 Yassine Assim. All Rights Reserved --- Icons credited to</p><a href="https://www.flaticon.com/">https://www.flaticon.com/</a>
+
+      <!-- Copyright notice -->
+      <p>
+        Copyright &#169; 2023 Yassine Assim. All Rights Reserved --- Icons
+        credited to
+      </p>
+
+      <!-- Link to flaticon.com for icons -->
+      <a href="https://www.flaticon.com/">https://www.flaticon.com/</a>
     </footer>
+
+    <!-- Script tag to include JavaScript file -->
     <script src="script.js"></script>
   </body>
 </html>
