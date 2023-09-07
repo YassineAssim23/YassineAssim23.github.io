@@ -1,7 +1,8 @@
 /* General */
 
 /* Importing a font from Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600&display=swap");
+ @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600&family=Source+Sans+3:wght@300;400;500;600&display=swap');
+/*@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600&display=swap");*/
 
 /* Resetting default margin and padding for all elements */
 * {
@@ -9,12 +10,18 @@
   padding: 0;
 }
 
-/* Setting the font family and background color for the entire page */
+/* Setting the font family and background color for the entire page 
 body {
   font-family: "League Spartan", sans-serif;
   background-color: rgba(243, 235, 224, 0.993);
 }
 
+
+*/
+body {
+  font-family: "Source Sans 3", sans-serif;
+  background-color: rgba(243, 235, 224, 0.993);
+}
 /* Enabling smooth scrolling behavior for HTML elements */
 html {
   scroll-behavior: smooth;
@@ -210,7 +217,7 @@ section {
   display: flex;
   height: 400px; /* Height of the profile picture container */
   width: 400px; /* Width of the profile picture container */
-  margin: auto 0; /* Margin to center the container */
+  margin: auto; /* Margin to center the container */
 }
 
 /* Container for text content within sections */
@@ -375,7 +382,9 @@ section {
 
 /* Styling for paragraph text in text containers */
 .text-container p {
+  padding: 2rem;
   color: black; /* Text color */
+  font-size: 24px;
 }
 
 /* Styling for the 'experience' section */
@@ -430,7 +439,7 @@ article .icon {
 .color-container {
   border-color: rgb(163, 163, 163); /* Border color for containers */
   background: rgb(243, 235, 224, 0.993); /* Background color with transparency */
-  transform: scale(1); /* Scale transformation for containers */
+  transform: scale(); /* Scale transformation for containers */
 }
 
 /* Styling for project images */
