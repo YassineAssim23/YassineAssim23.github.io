@@ -1,567 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Set the character encoding for the document -->
-    <meta charset="UTF-8" />
-    <!-- Define the viewport settings for responsive design -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Set the title of the web page -->
-    <title>My Portfolio</title>
-    <!-- Include external CSS files for styling -->
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <!-- Desktop navigation bar -->
-    <nav id="desktop-nav">
-      <!-- Logo container -->
-      <div class="logo">
-        <!-- Logo image -->
-        <img src="./assets/LOGO.png" alt="YASSINE LOGO" />
-      </div>
-      <!-- Navigation links container -->
-      <div>
-        <!-- Unordered list for navigation links -->
-        <ul class="nav-links">
-          <!-- Individual navigation items -->
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yassine Assim | Software & QA Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="logo">
+        <span class="logo-text">YA</span>
+    </div>
+    <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div class="nav-links">
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="assets/Yassine_Assim_FullStack_Resume.pdf" target="_blank">Resume</a>
+    </div>
+</nav>
 
-    <!-- Hamburger (mobile) navigation bar -->
-    <nav id="hamburger-nav">
-      <!-- Logo container -->
-      <div class="logo">
-        <!-- Logo image -->
-        <img src="./assets/LOGO.png" alt="YASSINE LOGO" />
-      </div>
-      <!-- Hamburger menu container -->
-      <div class="hamburger-menu">
-        <!-- Hamburger icon for mobile navigation -->
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <!-- Three horizontal lines representing the menu icon -->
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <!-- Navigation links for mobile -->
-        <div class="menu-links">
-          <!-- Individual navigation items with click event to toggle menu -->
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <!-- Container for profile picture -->
-      <div class="section__pic-container">
-        <!-- Profile picture image -->
-        <img
-          src="./assets/profile-pic.png"
-          alt="Yassine Assim Profile Picture"
-        />
-      </div>
-
-      <!-- Container for profile text -->
-      <div class="section__text">
-        <!-- Introduction text -->
-        <p class="section__text__p1">Hello, I'm</p>
-        <!-- Name -->
-        <h1 class="title">Yassine Assim</h1>
-        <!-- Occupation -->
-        <p class="section__text__p2">Software Engineering Student</p>
-
-        <!-- Container for buttons -->
-        <div class="btn-container">
-          <!-- Button to download resume (opens PDF file) -->
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/resume2023.pdf')"
-          >
-            Download Resume
-          </button>
-          <!-- Button to navigate to the contact section -->
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-
-        <!-- Container for social media links -->
-        <div id="socials-container">
-          <!-- LinkedIn profile link -->
-          <a href="https://www.linkedin.com/in/yassine-assim" target="_blank">
-            <!-- LinkedIn icon -->
-            <img
-              src="./assets/linkedin.png"
-              alt="My Linkedin Profile"
-              class="icon"
-            />
-          </a>
-          <!-- GitHub profile link -->
-          <a href="https://github.com/YassineAssim23" target="_blank">
-            <!-- GitHub icon -->
-            <img
-              src="./assets/github.png"
-              alt="My GitHub Profile"
-              class="icon"
-            />
-          </a>
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <!-- Title for the section -->
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-
-      <!-- Container for the section's content -->
-      <div class="section-container">
-        <!-- Container for the profile picture -->
-        <div class="section__pic-container">
-          <!-- Profile picture image -->
-          <img src="./assets/faq.png" alt="Profile picture" class="about-pic" />
-        </div>
-
-        <!-- Container for details and text -->
-        <div class="about-details-container">
-          <!-- Sub-container for experience and education details -->
-          <div class="about-containers">
-            <!-- Experience details -->
-            <div class="details-container">
-              <!-- Experience icon -->
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <!-- Experience information -->
-              <p>1+ year <br />Front & Backend Development</p>
-            </div>
-            <!-- Education details -->
-            <div class="details-container">
-              <!-- Education icon -->
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <!-- Education information -->
-              <p>
-                Software Development & Network Engineering (Advanced Diploma)<br />Honors
-                Bachelor of Computer Science (pursuing)
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="subtitle">Hello, I'm</p>
+                <h1>Yassine Assim</h1>
+                <h2>Software & QA Engineer</h2>
+                <p class="hero-description">
+                  A passionate software engineer with expertise in full-stack development and quality assurance.
+                  Currently pursuing Computer Software Engineering at Sheridan College.
               </p>
+              <div class="hero-buttons">
+                <a href="assets/resume.pdf" target="_blank" class="btn primary">View Resume</a>
+                <button class="btn secondary" onclick="location.href='#contact'">Contact Info</button>
             </div>
-          </div>
-
-          <!-- Container for the text description -->
-          <div class="text-container">
-            <p>
-              <!-- Personal introduction and description -->
-              A 2nd year software engineering student studying at Sheridan
-              College. With a passion for both front & backend development, I
-              thrive on tackling complex challenges and finding optimal
-              solutions for the task. I'm always eager to explore new
-              programming and engineering concepts and apply them in real-world
-              scenarios. Apart from programming, I love to freelance video edit,
-              listen to music of all kinds, and play video games!
-            </p>
-          </div>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/yassine-assim" target="_blank">
+                        <img src="assets/icons/linkedin.svg" alt="LinkedIn">
+                    </a>
+                    <a href="https://github.com/YassineAssim23" target="_blank">
+                        <img src="assets/icons/github.svg" alt="GitHub">
+                    </a>
+                    <a href="mailto:assimy@sheridancollege.ca">
+                        <img src="assets/icons/mail.svg" alt="Email">
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <!-- Arrow icon to navigate to the experience section -->
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <!-- Title for the section -->
-      <p class="section__text__p1">Here's My</p>
-      <h1 class="title">Experience</h1>
-
-      <!-- Container for experience details -->
-      <div class="experience-details-container">
-        <!-- Container for frontend and backend development details -->
-        <div class="about-containers">
-          <!-- Container for frontend development details -->
-          <div class="details-container">
-            <!-- Subtitle for frontend development -->
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <!-- Container for individual skills and experience -->
-            <div class="article-container">
-              <!-- Skill: HTML -->
-              <article>
-                <!-- HTML icon -->
-                <img src="./assets/htmlicon.png" alt="HTML icon" class="icon" />
-                <div>
-                  <!-- Skill name: HTML -->
-                  <h3>HTML</h3>
-                  <!-- Skill experience level -->
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <!-- Skill: CSS -->
-              <article>
-                <!-- CSS icon -->
-                <img src="./assets/cssicon.png" alt="HTML icon" class="icon" />
-                <div>
-                  <!-- Skill name: CSS -->
-                  <h3>CSS</h3>
-                  <!-- Skill experience level -->
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <!-- Skill: JavaScript -->
-              <article>
-                <!-- JavaScript icon -->
-                <img src="./assets/jsicon.png" alt="HTML icon" class="icon" />
-                <div>
-                  <!-- Skill name: JavaScript -->
-                  <h3>Javascript</h3>
-                  <!-- Skill experience level -->
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <!-- Skill: Git -->
-              <article>
-                <!-- Git icon -->
-                <img src="./assets/git.png" alt="Git icon" class="icon" />
-                <div>
-                  <!-- Skill name: Git -->
-                  <h3>Git</h3>
-                  <!-- Skill experience level -->
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <!-- Skill: React -->
-              <article>
-                <!-- React icon -->
-                <img
-                  src="./assets/reacticon.png"
-                  alt="HTML icon"
-                  class="icon"
-                />
-                <div>
-                  <!-- Skill name: React -->
-                  <h3>React</h3>
-                  <!-- Skill experience level -->
-                  <p>Basic</p>
-                </div>
-              </article>
-            </div>
-          </div>
-
-          <!-- Container for backend development details -->
-          <div class="details-container">
-            <!-- Subtitle for backend development -->
-            <h2 class="experience-sub-title">Backend Development</h2>
-            <!-- Container for individual skills and experience -->
-            <div class="article-container">
-              <!-- Skill: Java -->
-              <article>
-                <!-- Java icon -->
-                <img src="./assets/javaicon.png" alt="Java icon" class="icon" />
-                <div>
-                  <!-- Skill name: Java -->
-                  <h3>Java</h3>
-                  <!-- Skill experience level -->
-                  <p>Experienced</p>
-                </div>
-              </article>
-              <!-- Skill: Python -->
-              <article>
-                <!-- Python icon -->
-                <img
-                  src="./assets/pythonicon.png"
-                  alt="Python icon"
-                  class="icon"
-                />
-                <div>
-                  <!-- Skill name: Python -->
-                  <h3>Python</h3>
-                  <!-- Skill experience level -->
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <!-- Skill: PHP -->
-              <article>
-                <!-- PHP icon -->
-                <img src="./assets/phpicon.png" alt="PHP icon" class="icon" />
-                <div>
-                  <!-- Skill name: PHP -->
-                  <h3>PHP</h3>
-                  <!-- Skill experience level -->
-                  <p>Basic</p>
-                </div>
-              </article>
-              <!-- Skill: Spring Boot -->
-              <article>
-                <!-- Spring Boot icon -->
-                <img src="./assets/spring.png" alt="Spring icon" class="icon" />
-                <div>
-                  <!-- Skill name: Spring Boot -->
-                  <h3>Spring Boot</h3>
-                  <!-- Skill experience level -->
-                  <p>Basic</p>
-                </div>
-              </article>
-              <!-- Skill: MySQL -->
-              <article>
-                <!-- MySQL icon -->
-                <img src="./assets/mysql.png" alt="MYSQL icon" class="icon" />
-                <div>
-                  <!-- Skill name: MySQL -->
-                  <h3>MySQL</h3>
-                  <!-- Skill experience level -->
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Arrow icon to navigate to the projects section -->
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
     </section>
 
-    <section id="projects">
-      <!-- Title for the section -->
-      <p class="section__text__p1">Here are some of my</p>
-      <h1 class="title">Projects</h1>
 
-      <!-- Container for project details -->
-      <div class="experience-details-container">
-        <!-- Container for individual project details -->
-        <div class="about-containers">
-          <!-- Container for the first project details -->
-          <div class="details-container color-container">
-            <!-- Container for project image -->
-            <div class="article-container">
-              <!-- Project image -->
-              <img
-                src="./assets/filmfanatic.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <!-- Project title -->
-            <h2 class="experience-sub-title project-title">FilmFanatic</h2>
-            <!-- Project description -->
-            <p>
-              A dynamic movie management application meticulously crafted using
-              Java and JavaFX technologies. This versatile tool empowers
-              cinephiles to curate and organize their cinematic journey
-              effortlessly.
-            </p>
-            <br />
-            <!-- Technologies used -->
-            <p>Java • JavaFX</p>
-            <br />
-            <!-- Button to GitHub repository -->
-            <div class="btn-container">
-              <a
-                href="https://github.com/YassineAssim23/filmfanatic"
-                target="_blank"
-              >
-                <button class="btn btn-color-2 project-btn">Github</button>
-              </a>
-            </div>
-          </div>
 
-           <!-- Container for the first project details -->
-           <div class="details-container color-container">
-            <!-- Container for project image -->
-            <div class="article-container">
-              <!-- Project image -->
-              <img
-                src="./assets/melodycapsule.JPG"
-                alt="Project 4"
-                class="project-img"
-              />
-            </div>
-            <!-- Project title -->
-            <h2 class="experience-sub-title project-title">MelodyCapsule</h2>
-            <!-- Project description -->
-            <p>
-             A "Spotify Wrapped" like app that uses OAuth2 to handle login and authentication. Once authenticated, user gets access to features such as top artists, tracks, and recently played music.
-            </p>
-            <br />
-            <!-- Technologies used -->
-            <p>Python • Flask • Spotify API</p>
-            <br />
-            <!-- Button to GitHub repository -->
-            <div class="btn-container">
-              <a
-                href="https://github.com/YassineAssim23/MelodyCapsule"
-                target="_blank"
-              >
-                <button class="btn btn-color-2 project-btn">Github</button>
-              </a>
-            </div>
-          </div>
-
-          <div class="details-container color-container">
-            <!-- Container for project image -->
-            <div class="article-container">
-              <!-- Project image -->
-              <img
-                src="./assets/wargame.jpg"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <!-- Project title -->
-            <h2 class="experience-sub-title project-title">War Card Game</h2>
-            <!-- Project description -->
-            <p>
-              Java virtual adaptation of the classic card game, War. User takes turns playing against a computer drawing cards from shuffled deck. Player with the highest ranked card in that round gains a point. Whoever has the most points when all cards are distributed wins!
-            </p>
-            <br />
-            <!-- Technologies used -->
-            <p>Java • Visual Paradigm</p>
-            <br />
-            <!-- Button to GitHub repository -->
-            <div class="btn-container">
-              <a
-                href="https://github.com/tobeytheghost/WarGameDeliverable"
-                target="_blank"
-              >
-                <button class="btn btn-color-2 project-btn">Github</button>
-              </a>
-            </div>
-          </div>
-
-          <!-- Container for the second project details -->
-          <div class="details-container color-container">
-            <!-- Container for project image -->
-            <div class="article-container">
-              <!-- Project image -->
-              <img
-                src="./assets/carrrental.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <!-- Project title -->
-            <h2 class="experience-sub-title project-title">CarRental</h2>
-            <!-- Project description -->
-            <p>
-              A car rental website where you can view available vehicles and
-              book through the calendar.
-            </p>
-            <br />
-            <!-- Technologies used -->
-            <p>HTML • CSS • JS</p>
-            <br />
-            <!-- Buttons for GitHub repository and live demo -->
-            <div class="btn-container">
-              <a
-                href="https://github.com/YassineAssim23/carrentalproject"
-                target="_blank"
-              >
-                <button class="btn btn-color-2 project-btn">Github</button>
-              </a>
-              <a
-                href="https://yassineassim-carrental.netlify.app/"
-                target="_blank"
-              >
-                <button class="btn btn-color-2 project-btn">Live Demo</button>
-              </a>
-            </div>
-          </div>
-        </div>
+    <!-- After the hero section -->
+    <section class="experience" id="experience">
+      <div class="section-header">
+          <p class="subtitle">Where I've Worked</p>
+          <h2>Experience</h2>
       </div>
 
-      <!-- Arrow icon to navigate to the contact section -->
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <!-- Section title -->
-      <p class="section__text__p1">Let's Connect!</p>
-      <h1 class="title">Contact Me</h1>
+      <div class="timeline">
+          <div class="timeline-item">
+              <div class="timeline-date">
+                  <span>Sept - Dec 2024</span>
+                  <div class="company-logo">
+                    <img src="assets/evertz.jpg" alt="Evertz Microsystems" />
+                </div>
+              </div>
+              <div class="timeline-content">
+                  <h3>Software Engineer Intern</h3>
+                  <h4>Evertz Microsystems</h4>
+                  <ul class="achievement-list">
+                      <li>
+                          <span class="highlight">Engineered firmware comparison ETL pipeline</span> using Python, Flask and SQLite, reducing analysis time from days to seconds
+                      </li>
+                      <li>
+                          <span class="highlight">Developed automated test framework</span> for broadcast equipment validation, supporting multiple timing reference generators
+                      </li>
+                      <li>
+                          <span class="highlight">Configured Jenkins pipeline</span> to automate firmware test execution, reducing manual testing overhead
+                      </li>
+                      <li>
+                        <span class="highlight">Built RESTful API endpoints</span> for firmware version management with React & TypeScript frontend
+                      </li>
+                  </ul>
+                  <div class="tech-stack">
+                      <span class="tech-tag">Python</span>
+                      <span class="tech-tag">Flask</span>
+                      <span class="tech-tag">Pandas</span>
+                      <span class="tech-tag">SQLite</span>
+                      <span class="tech-tag">Jenkins</span>
+                      <span class="tech-tag">React</span>
+                  </div>
+              </div>
+          </div>
 
-      <!-- Container for contact information -->
-      <div class="contact-info-upper-container">
-        <!-- Container for email contact -->
-        <div class="contact-info-container">
-          <!-- Email icon -->
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <!-- Email address with mailto link -->
-          <p>
-            <a href="mailto:assimy@sheridancollege.ca"
-              >assimy@sheridancollege.ca</a
-            >
-          </p>
-        </div>
-      </div>
-
-      <!-- Container for LinkedIn contact -->
-      <div class="contact-info-upper-container">
-        <!-- Container for LinkedIn icon and link -->
-        <div class="contact-info-container">
-          <!-- LinkedIn icon -->
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <!-- LinkedIn profile link -->
-          <p>
-            <a href="https://www.linkedin.com/in/yassine-assim/" target="_blank">LinkedIn</a>
-          </p>
-        </div>
+          <div class="timeline-item">
+              <div class="timeline-date">
+                  <span>Jan - Apr 2024</span>
+                  <div class="company-logo">
+                    <img src="assets/evertz.jpg" alt="Evertz Microsystems" />
+                </div>
+              </div>
+              <div class="timeline-content">
+                  <h3>Software Engineer Intern</h3>
+                  <h4>Evertz Microsystems</h4>
+                  <ul class="achievement-list">
+                      <li>
+                          <span class="highlight">Developed full-stack power supply calculator</span> using Python and wxPython for broadcast system configurations
+                      </li>
+                      <li>
+                          Implemented OOP architecture supporting <span class="highlight">20+ device types</span> including enterprise routing platforms
+                      </li>
+                      <li>
+                          Built validation system for power requirements, preventing costly hardware misconfigurations
+                      </li>
+                      <li>
+                          Created intuitive UI with dynamic grid layouts for power consumption calculations
+                      </li>
+                  </ul>
+                  <div class="tech-stack">
+                      <span class="tech-tag">Python</span>
+                      <span class="tech-tag">Automation</span>
+                      <span class="tech-tag">Linux</span>
+                      <span class="tech-tag">TestRail</span>
+                      <span class="tech-tag">OOP</span>
+                  </div>
+              </div>
+          </div>
       </div>
     </section>
 
-    <footer>
-      <!-- Footer navigation links -->
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+    <section class="projects" id="projects">
+      <div class="section-header">
+          <p class="subtitle">Featured Work</p>
+          <h2>Projects</h2>
+      </div>
+      <!-- Brawlr -->
+      <div class="project-card">
+        <div class="project-image">
+            <img src="assets/projects/brawlr.png" alt="Brawlr Application" />
         </div>
-      </nav>
+        <div class="project-content">
+            <h3>Brawlr</h3>
+            <p class="project-subtitle">AI Boxing Judge Application</p>
+            <p class="project-description">
+                Real-time boxing match analysis system using computer vision and machine learning. 
+                Features live video streaming from mobile devices and custom AI model for boxing move detection.
+            </p>
+            <div class="tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">TensorFlow</span>
+                <span class="tech-tag">React Native</span>
+                <span class="tech-tag">WebRTC</span>
+            </div>
+            <div class="project-links">
+                <a href="https://github.com/fixture121/brawlr" target="_blank" class="project-link">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+  
+      <!-- eFantasy -->
+      <div class="project-card">
+          <div class="project-image">
+              <div class="project-placeholder">
+                  <span>eFantasy</span>
+              </div>
+          </div>
+          <div class="project-content">
+              <h3>eFantasy</h3>
+              <p class="project-subtitle">Fantasy Esports Platform</p>
+              <p class="project-description">
+                  Full-stack fantasy esports platform built with Rust and React. Features secure user authentication, 
+                  league management, and real-time player statistics tracking with PostgreSQL and MongoDB integration.
+              </p>
+              <div class="tech-stack">
+                  <span class="tech-tag">Rust</span>
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                  <span class="tech-tag">MongoDB</span>
+              </div>
+              <div class="project-links">
+                  <a href="https://github.com/YassineAssim23/efantasyrepo" target="_blank" class="project-link">
+                      <svg class="icon" viewBox="0 0 24 24">
+                          <path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                      </svg>
+                      GitHub
+                  </a>
+              </div>
+          </div>
+      </div>
+  
+      <!-- EduSCROLL -->
+      <div class="project-card">
+        <div class="project-image">
+          <img src="assets/projects/eduscroller.png" alt="EduSCROLL Platform" />
+      </div>
+          <div class="project-content">
+              <h3>EduSCROLL</h3>
+              <p class="project-subtitle">Educational Content Platform</p>
+              <p class="project-description">
+                  Cross-platform mobile app serving educational content with automated content aggregation. 
+                  Features RESTful API, MongoDB integration, and automated web scraping system processing 100+ articles daily.
+              </p>
+              <div class="tech-stack">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Flask</span>
+                  <span class="tech-tag">MongoDB</span>
+                  <span class="tech-tag">React Native</span>
+              </div>
+              <div class="project-links">
+                  <a href="https://github.com/YassineAssim23/eduscroller" target="_blank" class="project-link">
+                      <svg class="icon" viewBox="0 0 24 24">
+                          <path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                      </svg>
+                      GitHub
+                  </a>
+              </div>
+          </div>
+      </div>
+  
+      <!-- MelodyCapsule -->
+      <div class="project-card">
+          <div class="project-image">
+              <div class="project-placeholder">
+                  <span>MelodyCapsule</span>
+              </div>
+          </div>
+          <div class="project-content">
+              <h3>MelodyCapsule</h3>
+              <p class="project-subtitle">Spotify Stats Analyzer</p>
+              <p class="project-description">
+                  A Spotify Wrapped-inspired application using OAuth2 for authentication. Provides users with 
+                  insights into their top artists, tracks, and recently played music through Spotify's API.
+              </p>
+              <div class="tech-stack">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Flask</span>
+                  <span class="tech-tag">Spotify API</span>
+                  <span class="tech-tag">OAuth2</span>
+              </div>
+              <div class="project-links">
+                  <a href="https://github.com/YassineAssim23/MelodyCapsule" target="_blank" class="project-link">
+                      <svg class="icon" viewBox="0 0 24 24">
+                          <path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                      </svg>
+                      GitHub
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>
+<!-- After the projects section -->
+<section class="contact" id="contact">
+  <div class="section-header">
+      <p class="subtitle">Get In Touch</p>
+      <h2>Contact</h2>
+  </div>
 
-      <!-- Copyright notice -->
-      <p>
-        Copyright &#169; 2023 Yassine Assim. All Rights Reserved --- Icons
-        credited to
+  <div class="contact-content">
+      <p class="contact-description">
+          I'm currently looking for Software QA internship opportunities! Feel free to reach out 
+          if you'd like to connect or discuss potential opportunities.
       </p>
+      
+      <div class="contact-links">
+          <a href="mailto:assimy@sheridancollege.ca" class="contact-link">
+              <div class="contact-link-content">
+                  <svg class="icon" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
+                  </svg>
+                  <span>assimy@sheridancollege.ca</span>
+              </div>
+          </a>
+          
+          <a href="https://linkedin.com/in/yassine-assim" target="_blank" class="contact-link">
+              <div class="contact-link-content">
+                  <svg class="icon" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z" />
+                  </svg>
+                  <span>linkedin.com/in/yassine-assim</span>
+              </div>
+          </a>
+          
+          <a href="tel:+12895002615" class="contact-link">
+              <div class="contact-link-content">
+                  <svg class="icon" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" />
+                  </svg>
+                  <span>(289) 500-2615</span>
+              </div>
+          </a>
+      </div>
+  </div>
+</section>
 
-      <!-- Link to flaticon.com for icons -->
-      <a href="https://www.flaticon.com/">https://www.flaticon.com/</a>
-    </footer>
+<!-- Footer -->
+<footer>
+  <p>Built by Yassine Assim © 2025</p>
+</footer>
 
-    <!-- Script tag to include JavaScript file -->
-    <script src="script.js"></script>
-  </body>
+    <!-- More sections to follow -->
+    <button id="back-to-top" aria-label="Back to top">
+      <svg viewBox="0 0 24 24">
+          <path fill="currentColor" d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z" />
+      </svg>
+  </button>
+  <script src="script.js"></script>
+</body>
 </html>

@@ -1,519 +1,657 @@
-/* General */
+:root {
+  /* Color scheme - deep purple theme */
+  --bg-primary: #0f0f1a;
+  --bg-secondary: #1a1a2e;
+  --accent-primary: #6c63ff;
+  --accent-secondary: #8b83ff;
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+}
 
-/* Importing a font from Google Fonts */
- @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600&family=Source+Sans+3:wght@300;400;500;600&display=swap');
-/*@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600&display=swap");*/
-
-/* Resetting default margin and padding for all elements */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-/* Setting the font family and background color for the entire page 
 body {
-  font-family: "League Spartan", sans-serif;
-  background-color: rgba(243, 235, 224, 0.993);
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
 }
 
-
-*/
-body {
-  font-family: "Source Sans 3", sans-serif;
-  background-color: rgba(243, 235, 224, 0.993);
-}
-/* Enabling smooth scrolling behavior for HTML elements */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Setting the default text color for paragraphs */
-p {
-  color: rgb(85, 85, 85);
+/* Modern navigation */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(15, 15, 26, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
 }
 
-/* Transition */
-
-/* Applying smooth transitions to anchor links and buttons */
-a,
-.btn {
-  transition: all 300ms ease;
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* Desktop Navigation */
-
-/* Styling for navigation elements on desktop */
-
-/* Styling for navigation bar and navigation links */
-nav,
 .nav-links {
   display: flex;
+  gap: var(--spacing-md);
 }
 
-/* Styling for the main navigation container */
-nav {
-  justify-content: space-around;
-  align-items: center;
-  height: 17vh;
-}
-
-/* Styling for the navigation links list */
-.nav-links {
-  gap: 2rem;
-  list-style: none;
-  font-size: 1.5rem;
-}
-
-/* Styling for anchor links */
-a {
-  color: rgba(126, 88, 6, 0.726);
+.nav-links a {
+  color: var(--text-secondary);
   text-decoration: none;
-  text-decoration-color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-/* Styling for anchor links on hover */
-a:hover {
-  color: rgba(0, 0, 0, 0.329);
-  text-decoration: underline;
-  text-underline-offset: 0.5rem;
-  text-decoration-color: rgb(0, 0, 0, 0.329);
+.nav-links a:hover {
+  color: var(--text-primary);
 }
 
-/* Styling for the logo image */
-.logo img {
-  width: 200px;
-  height: auto;
+/* Hero section */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--spacing-lg);
+  background: radial-gradient(
+      circle at top right,
+      rgba(108, 99, 255, 0.1),
+      transparent 40%
+  );
+  padding: 0 var(--spacing-lg);
+    padding-top: 80px; /* Account for fixed navbar */
+    padding-bottom: var(--spacing-md); /* Add bottom padding */
 }
 
-/* Hover effect for the logo */
-.logo:hover {
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-description {
+  margin-bottom: var(--spacing-sm); /* Reduced from --spacing-md */
+}
+
+.hero-buttons {
+  margin-top: var(--spacing-sm); /* Reduced from --spacing-md */
+}
+
+.subtitle {
+  color: var(--accent-primary);
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: var(--spacing-md);
+}
+
+/* Modern buttons */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
   cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
-
-/* Hamburger Menu */
-
-/* Hide the hamburger navigation by default */
-#hamburger-nav {
-  display: none;
+.btn:hover {
+  transform: translateY(-2px);
 }
 
-/* Styling for the hamburger menu container */
-.hamburger-menu {
+.primary {
+  background: var(--accent-primary);
+  color: var(--text-primary);
+  border: none;
+}
+
+.secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--accent-primary);
+}
+
+/* Social links */
+.social-links {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+.social-links a {
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--accent-primary);
+}
+
+/* Add to your existing CSS */
+
+/* Experience Section */
+.experience {
+  padding-top: var(--spacing-md); /* Reduced from --spacing-lg */
+  padding-bottom: var(--spacing-lg);
+    padding-left: var(--spacing-lg);
+    padding-right: var(--spacing-lg);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline {
   position: relative;
-  display: inline-block;
+  margin-top: var(--spacing-lg);
 }
 
-/* Styling for the hamburger icon container */
-.hamburger-icon {
+
+.timeline-item {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  position: relative;
+}
+
+.timeline-date {
+  min-width: 200px;
+  text-align: right;
+  padding-right: var(--spacing-md);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 24px;
-  width: 30px;
-  cursor: pointer;
+  align-items: flex-end;
+  gap: var(--spacing-sm);
 }
 
-/* Styling for the individual lines (spans) in the hamburger icon */
-.hamburger-icon span {
+.company-logo {
+  width: 40px;
+  height: 40px;
+  background: rgba(108, 99, 255, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(108, 99, 255, 0.2);
+}
+.company-initial {
+  color: var(--accent-primary);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.timeline-content {
+  flex: 1;
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  padding: var(--spacing-md);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.timeline-content h3 {
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.timeline-content h4 {
+  color: var(--accent-primary);
+  font-size: 1rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.achievement-list {
+  list-style: none;
+  margin-bottom: var(--spacing-md);
+}
+
+.achievement-list li {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+  position: relative;
+  padding-left: 1.5rem;
+  line-height: 1.6;
+}
+
+.achievement-list li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--accent-primary);
+}
+
+.highlight {
+  color: var(--text-primary);
+}
+
+.tech-stack {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: var(--spacing-sm);
+}
+
+.tech-tag {
+  background: rgba(108, 99, 255, 0.1);
+  color: var(--accent-primary);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .timeline::before {
+      left: 20px;
+  }
+  
+  .timeline-item {
+      flex-direction: column;
+      gap: var(--spacing-sm);
+  }
+  
+  .timeline-date {
+      text-align: left;
+      padding-left: 60px;
+      flex-direction: row;
+      align-items: center;
+  }
+}
+.section-header {
+  margin-bottom: var(--spacing-md); /* Reduced from --spacing-lg */
+}
+
+/* Add to your existing CSS */
+
+/* Projects Section */
+.projects {
+  padding: var(--spacing-lg) var(--spacing-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Change to 2 columns */
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+  max-width: 1200px; /* Ensure the grid doesn't get too wide */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projects, .experience, .contact {
+  padding: var(--spacing-md) var(--spacing-lg); /* Reduced top/bottom padding */
+}
+
+.project-card {
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+  margin-bottom: var(--spacing-md); /* Reduced from --spacing-lg */
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  height: 250px; /* Slightly shorter height for better proportions */
+}
+
+.project-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--bg-secondary), var(--accent-primary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--text-primary);
+  opacity: 0.7;
+}
+
+.project-content {
+  padding: var(--spacing-sm) var(--spacing-md); /* Reduced padding */
+}
+
+.project-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-xs);
+  color: var(--text-primary);
+}
+
+.project-subtitle {
+  color: var(--accent-primary);
+  font-size: 1rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.project-description {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.project-links {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: var(--accent-primary);
+}
+
+.project-link .icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .projects-grid {
+      grid-template-columns: 1fr; /* Stack cards on mobile */
+  }
+}
+
+/* Add to your existing CSS */
+
+.contact {
+  padding: var(--spacing-lg) var(--spacing-lg);
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-content {
+  text-align: center;
+  margin-top: var(--spacing-lg);
+}
+
+.contact-description {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.6;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: var(--text-primary);
+  padding: 1rem;
+  border-radius: 8px;
+  background: var(--bg-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+  transform: translateY(-2px);
+  background: rgba(108, 99, 255, 0.1);
+  border-color: var(--accent-primary);
+}
+
+.contact-link-content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.contact-link .icon {
+  width: 24px;
+  height: 24px;
+  color: var(--accent-primary);
+}
+
+footer {
+  text-align: center;
+  padding: var(--spacing-lg);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact {
+      padding: var(--spacing-lg) var(--spacing-md);
+  }
+  
+  .contact-description {
+      font-size: 1rem;
+  }
+  
+  .contact-link-content span {
+      font-size: 0.9rem;
+  }
+}
+
+.animate-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: Different animations for different elements */
+.project-card.animate-hidden {
+  transform: translateY(40px);
+}
+
+.timeline-item.animate-hidden {
+  transform: translateX(-20px);
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--accent-primary);
+  color: white;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#back-to-top:hover {
+  background: var(--accent-secondary);
+  transform: translateY(-2px);
+}
+
+#back-to-top svg {
+  width: 24px;
+  height: 24px;
+}
+
+.company-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* This preserves the logo's aspect ratio */
+}
+
+.project-image img {
+  width: 100%;
+  height: 300px; /* Fixed height */
+  object-fit: contain; /* Changed from cover to contain */
+  background: var(--bg-secondary); /* Background for images that don't fill space */
+  padding: 1rem; /* Add some padding around images */
+}
+
+.project-image:hover img {
+  transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+/* Keep the placeholder style for projects without images */
+.project-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--bg-secondary), var(--accent-primary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--text-primary);
+  opacity: 0.7;
+}
+
+.about-content {
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  padding: var(--spacing-lg);
+  margin-top: var(--spacing-md);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.skill-category h4 {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.resume-download {
+  margin-top: var(--spacing-lg);
+  text-align: center;
+}
+
+.education-item {
+  margin-bottom: var(--spacing-md);
+}
+
+.education-item h4 {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.education-item .date {
+  color: var(--accent-primary);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Add to your CSS */
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.mobile-menu-btn span {
   width: 100%;
   height: 2px;
-  background-color: black;
-  transition: all 0.3s ease-in-out;
+  background: var(--text-primary);
+  transition: all 0.3s ease;
 }
 
-/* Styling for the menu links container */
-.menu-links {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: white;
-  width: fit-content;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
-}
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+      display: flex;
+  }
 
-/* Styling for the menu link items */
-.menu-links a {
-  display: block;
-  padding: 10px;
-  text-align: center;
-  font-size: 1.5rem;
-  color: black;
-  text-decoration: none;
-  transition: all 0.3s ease-in-out;
-}
+  .nav-links {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100vh;
+      width: 250px;
+      flex-direction: column;
+      background: var(--bg-secondary);
+      padding: 80px 20px 20px;
+      transition: 0.3s ease;
+  }
 
-/* Remove list-style for menu link items */
-.menu-links li {
-  list-style: none;
-}
+  .nav-links.active {
+      right: 0;
+  }
 
-/* Open the menu links container */
-.menu-links.open {
-  max-height: 300px;
-}
-
-/* Animation for the hamburger icon when the menu is open */
-
-/* Rotate and translate the first line to create an "X" shape */
-.hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(10px, 5px);
-}
-
-/* Hide the middle line when the menu is open */
-.hamburger-icon.open span:nth-child(2) {
-  opacity: 0;
-}
-
-/* Rotate and translate the last line to create an "X" shape */
-.hamburger-icon.open span:last-child {
-  transform: rotate(-45deg) translate(10px, -5px);
-}
-
-/* Reset the styles of the first line when the menu is open */
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
-/* Reset the opacity of the first line when the menu is open */
-.hamburger-icon span:first-child {
-  opacity: 1;
-}
-
-/* Reset the styles of the first line when the menu is open */
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
-
-/* Sections */
-
-/* Styling for all sections */
-section {
-  padding-top: 4vh; /* Top padding for sections */
-  height: 96vh; /* Sections take up 96% of the viewport height */
-  margin: 0 10rem; /* Left and right margin for spacing */
-  box-sizing: border-box; /* Include padding and border in the total width/height */
-  min-height: fit-content; /* Ensure minimum height fits content */
-}
-
-/* Container for sections, using flex display */
-.section-container {
-  display: flex;
-}
-
-/* Profile section specific styles */
-#profile {
-  display: flex;
-  justify-content: center; /* Center content horizontally */
-  gap: 5rem; /* Gap between elements */
-  height: 80vh; /* Height of the profile section */
-}
-
-/* Container for the profile picture */
-.section__pic-container {
-  display: flex;
-  height: 400px; /* Height of the profile picture container */
-  width: 400px; /* Width of the profile picture container */
-  margin: auto; /* Margin to center the container */
-}
-
-/* Container for text content within sections */
-.section__text {
-  align-self: center; /* Vertically center text content */
-  text-align: center; /* Center-align text */
-}
-
-/* Styling for paragraph text within sections */
-.section__text p {
-  font-weight: 600; /* Bold font for paragraphs */
-}
-
-/* Styling for the first paragraph in sections */
-.section__text__p1 {
-  text-align: center; /* Center-align first paragraph */
-}
-
-/* Styling for the second paragraph in sections */
-.section__text__p2 {
-  font-size: 1.75rem; /* Font size for the second paragraph */
-  margin-bottom: 1rem; /* Bottom margin for spacing */
-}
-
-/* Styling for section titles */
-.title {
-  font-size: 4rem; /* Font size for titles */
-  text-align: center; /* Center-align titles */
-}
-
-/* Container for social media icons */
-#socials-container {
-  display: flex;
-  justify-content: center; /* Center-align social media icons */
-  margin-top: 1rem; /* Top margin for spacing */
-  gap: 1rem; /* Gap between social media icons */
-}
-
-/* Styling for social media icons */
-.icon {
-  cursor: pointer; /* Cursor style for icons */
-  height: 2rem; /* Height of icons */
-}
-
-/* Container for buttons within sections */
-.btn-container {
-  display: flex;
-  justify-content: center; /* Center-align buttons */
-  gap: 1rem; /* Gap between buttons */
-}
-
-/* Styling for buttons within sections */
-.btn {
-  font-weight: 600; /* Bold font for buttons */
-  transition: all 300ms ease; /* Transition effect for buttons */
-  padding: 1rem; /* Padding for buttons */
-  width: 8rem; /* Width of buttons */
-  border-radius: 2rem; /* Border radius for buttons */
-}
-
-/* Styling for button colors */
-.btn-color-1,
-.btn-color-2 {
-  border: rgb(53, 53, 53) 0.1rem solid; /* Border for buttons */
-}
-
-/* Hover effect for button color 1 */
-.btn-color-1:hover,
-.btn-color-2:hover {
-  cursor: pointer; /* Cursor style on hover */
-}
-
-/* Background and text color for button color 1 on hover */
-.btn-color-1,
-.btn-color-2:hover {
-  background: rgba(94, 204, 204, 0.589); /* Background color */
-  color: rgb(0, 0, 0); /* Text color */
-}
-
-/* Background color for button color 1 on hover */
-.btn-color-1:hover {
-  background: rgb(248, 221, 139); /* Background color */
-}
-
-/* Styling for button color 2 */
-.btn-color-2 {
-  background: none; /* Transparent background for button color 2 */
-}
-
-/* Border color for button color 2 on hover */
-.btn-color-2:hover {
-  border: rgb(255, 255, 255) 0.1rem solid; /* Border color */
-}
-
-/* Gap between elements within sections */
-.btn-container {
-  gap: 1rem;
-}
-
-/* About section specific styles */
-#about {
-  position: relative; /* Relative positioning for the about section */
-}
-
-/* Gap between about containers */
-.about-containers {
-  gap: 2rem;
-  margin-bottom: 2rem; /* Bottom margin for spacing */
-  margin-top: 2rem; /* Top margin for spacing */
-}
-
-/* Flex container for about details */
-.about-details-container {
-  justify-content: center; /* Center-align about details */
-  flex-direction: column; /* Column layout for about details */
-}
-
-/* Flex container for about containers */
-.about-containers,
-.about-details-container {
-  display: flex;
-}
-
-/* Styling for the about picture */
-.about-pic {
-  border-radius: 2rem; /* Border radius for the about picture */
-  width: 300px; /* Width of the about picture */
-  height: 300px; /* Height of the about picture */
-}
-
-/* Styling for the arrow icon */
-.arrow {
-  position: absolute; /* Absolute positioning for the arrow icon */
-  right: -5rem; /* Right position with an offset */
-  bottom: 2.5rem; /* Bottom position with an offset */
-}
-
-
-/* Styling for details containers */
-.details-container {
-  padding: 1.5rem; /* Padding inside the details container */
-  flex: 1; /* Allow flexible sizing within a flex container */
-  background: rgba(243, 235, 224, 0.993); /* Background color with transparency */
-  border-radius: 2rem; /* Border radius for rounded corners */
-  border: rgb(53, 53, 53) 0.1rem solid; /* Border style */
-  border-color: rgb(163, 163, 163); /* Border color */
-  text-align: center; /* Center-align text */
-}
-
-/* Styling for section containers */
-.section-container {
-  gap: 4rem; /* Gap between section containers */
-  height: 80%; /* Height of section containers */
-}
-
-/* Styling for the profile picture container */
-.section__pic-container {
-  height: 400px; /* Height of the profile picture container */
-  width: 400px; /* Width of the profile picture container */
-  margin: auto 0; /* Margin for centering the container */
-}
-
-/* Styling for paragraph text in text containers */
-.text-container p {
-  padding: 2rem;
-  color: black; /* Text color */
-  font-size: 24px;
-}
-
-/* Styling for the 'experience' section */
-#experience {
-  position: relative; /* Relative positioning for the 'experience' section */
-}
-
-/* Styling for experience sub-titles */
-.experience-sub-title {
-  color: rgb(85, 85, 85); /* Text color for sub-titles */
-  font-weight: 600; /* Bold font weight */
-  font-size: 1.75rem; /* Font size */
-  margin-bottom: 2rem; /* Bottom margin for spacing */
-}
-
-/* Styling for the container of experience details */
-.experience-details-container {
-  display: flex; /* Flex display for arranging experience details */
-  justify-content: center; /* Center-align content horizontally */
-  flex-direction: column; /* Column layout for content */
-}
-
-/* Styling for the container of articles in experience section */
-.article-container {
-  display: flex; /* Flex display for arranging articles */
-  text-align: initial; /* Left-align text */
-  flex-wrap: wrap; /* Wrap articles when there's not enough space */
-  flex-direction: row; /* Arrange articles in rows */
-  gap: 2.5rem; /* Gap between articles */
-  justify-content: space-around; /* Evenly space articles */
-}
-
-/* Styling for individual articles in experience section */
-article {
-  display: flex; /* Flex display for individual articles */
-  width: 10rem; /* Width of each article */
-  justify-content: space-around; /* Evenly space content within articles */
-  gap: 0.5rem; /* Gap between content within articles */
-}
-
-/* Styling for icons within articles */
-article .icon {
-  cursor: default; /* Default cursor style for icons */
-}
-
-/* Styling for the 'projects' section */
-#projects {
-  position: relative; /* Relative positioning for the 'projects' section */
-}
-
-/* Styling for containers with a background color */
-.color-container {
-  border-color: rgb(163, 163, 163); /* Border color for containers */
-  background: rgb(243, 235, 224, 0.993); /* Background color with transparency */
-  transform: scale(); /* Scale transformation for containers */
-}
-
-/* Styling for project images */
-.project-img {
-  border-radius: 1rem; /* Border radius for rounded project images */
-  width: 90%; /* Width of project images */
-  height: 90%; /* Height of project images */
-}
-
-/* Styling for project titles */
-.project-title {
-  margin: 1rem; /* Margin for project titles */
-  color: black; /* Text color for project titles */
-}
-
-/* Styling for project buttons */
-.project-btn {
-  color: black; /* Text color for project buttons */
-  border-color: rgb(163, 163, 163); /* Border color for project buttons */
-}
-
-/* Styling for the 'contact' section */
-#contact {
-  display: flex; /* Flex display for the 'contact' section */
-  justify-content: center; /* Center-align content horizontally */
-  flex-direction: column; /* Column layout for content */
-  height: 70vh; /* Height of the 'contact' section */
-}
-
-/* Styling for upper containers in the 'contact' section */
-.contact-info-upper-container {
-  display: flex; /* Flex display for upper containers */
-  justify-content: center; /* Center-align content horizontally */
-  border-radius: 2rem; /* Border radius for upper containers */
-  border: rgb(53, 53, 53) 0.1rem solid; /* Border style */
-  border-color: rgb(163, 163, 163); /* Border color */
-  background: (250, 250, 250); /* Background color (Note: Missing 'rgba' here) */
-  margin: 2rem auto; /* Margin for upper containers */
-  padding: 0.5rem; /* Padding for upper containers */
-}
-
-/* Styling for containers in the 'contact' section */
-.contact-info-container {
-  display: flex; /* Flex display for containers */
-  align-items: center; /* Center-align content vertically */
-  justify-content: center; /* Center-align content horizontally */
-  gap: 0.5rem; /* Gap between elements within containers */
-  margin: 1rem; /* Margin for containers */
-}
-
-/* Styling for paragraph text within containers */
-.contact-info-container p {
-  font-size: larger; /* Larger font size for text */
-}
-
-/* Styling for contact icons */
-.contact-icon {
-  cursor: default; /* Default cursor style for contact icons */
-}
-
-/* Styling for the email icon */
-.email-icon {
-  height: 2.5rem; /* Height of the email icon */
-}
-
-/* Styling for the footer section */
-footer {
-  height: 26vh; /* Height of the footer section */
-  margin: 0 1rem; /* Margin for the footer section */
-}
-
-/* Styling for text and links within the footer */
-footer p, a {
-  text-align: center; /* Center-align text and links */
-  justify-content: center; /* Center content horizontally */
-  display: flex; /* Flex display for text and links */
+  .nav-links a {
+      padding: 15px 0;
+      font-size: 1.1rem;
+  }
 }
